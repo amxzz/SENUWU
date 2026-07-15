@@ -1,0 +1,453 @@
+                               PROGRAM KOMPUTER
+PEMODELAN KLASTERISASI KESEJAHTERAAN ANTARWILAYAH
+
+        BERBASIS PIPELINE K-MEANS DAN RANDOM FOREST
+
+                                                    Disusun oleh:
+                                    Naufal Azaria Sumpeno P (230101026)
+                                    Rahma Nurhuda Hanifah (230101033)
+
+                                          Sita Mei Wulan S (230101036)
+                                                     2026
+                                    KATA PENGANTAR
+
+Puji syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa atas terselesaikannya pengembangan
+program komputer "Pemodelan Klasterisasi Kesejahteraan Antarwilayah Berbasis Pipeline K-Means dan
+Random Forest". Dokumentasi teknis program ini disusun sebagai bentuk pertanggungjawaban luaran
+(output) dari Project-Based Learning (PjBL) kolaboratif yang mengintegrasikan mata kuliah Statistika
+Lanjut, Data Mining, dan Pemrograman Python.
+Program ini dirancang khusus untuk memodelkan polarisasi tingkat kesejahteraan dan membuktikan
+hipotesis ketimpangan pembangunan wilayah di Indonesia (sentralisasi Pulau Jawa atau Jawa-sentris).
+Melalui analisis data kuantitatif menggunakan pipeline machine learning K-Means dan pembobotan fitur
+menggunakan Random Forest, hasil klasterisasi dapat dipetakan secara spasial menggunakan visualisasi
+choropleth map.
+Kami menyadari dokumentasi program komputer ini masih jauh dari sempurna. Oleh karena itu, kritik,
+saran, serta masukan yang membangun dari para pembaca sangat kami harapkan demi perbaikan dan
+pengembangan riset pemodelan spasial ini ke depannya.
+
+                                                                                                     Surakarta, 9 Juni 2026
+
+                                                                                                              Tim Penyusun
+ PEMODELAN KLASTERISASI KESEJAHTERAAN ANTARWILAYAH
+
+          BERBASIS PIPELINE K-MEANS DAN RANDOM FOREST
+
+Dokumentasi berikut menyajikan langkah-langkah implementasi kode program Python untuk pemodelan
+klasterisasi tingkat kesejahteraan antarwilayah di Indonesia. Pemodelan ini dibangun menggunakan
+pipeline analisis data science dengan struktur 8 tahap secara berurutan.
+
+Tahap 1: Pemuatan dan Pembersihan Data (Data Ingestion & Cleaning)
+
+Pada tahap awal ini, program memuat berkas dataset sosial-ekonomi mentah berformat CSV. Program
+melakukan inisialisasi variabel filter geografis (Pulau Jawa vs Luar Jawa) dengan menambahkan kolom
+baru 'Is_Jawa'. Untuk meminimalkan skewness ekstrem pada variabel PDRB (Produk Domestik Regional
+Bruto), dilakukan transformasi logaritma (np.log1p) menjadi 'PDRB_Log'. Selanjutnya, program
+menghapus missing values pada fitur-fitur utama dan merangkum statistik deskriptif awal.
+
+          # TAHAP 1: Pemuatan dan Pembersihan Data
+          import os
+          import requests
+          import pandas as pd
+          import numpy as np
+          import matplotlib.pyplot as plt
+          import seaborn as sns
+          from sklearn.preprocessing import StandardScaler
+          from sklearn.cluster import KMeans
+          from sklearn.ensemble import RandomForestClassifier
+          from sklearn.metrics import silhouette_score
+          import geopandas as gpd
+
+          # Konfigurasi plot global
+          plt.rcParams["figure.dpi"] = 150
+          plt.rcParams["font.family"] = "serif"
+          sns.set_style("whitegrid")
+          pd.set_option("display.float_format", lambda x: "%.4f" % x)
+
+          # Inisialisasi pipeline
+          data_path = r"dataset\Klasifikasi Tingkat Kemiskinan di Indonesia.csv"
+          jawa_provinces = ["JAWA BARAT", "JAWA TENGAH", "D I YOGYAKARTA", "JAWA TIMUR", "BANTEN", "DKI
+          JAKARTA"]
+          pdrb_col = "PDRB atas Dasar Harga Konstan menurut Pengeluaran (Rupiah)"
+          fitur_utama = [
+
+                "PDRB_Log",
+                "Tingkat Pengangguran Terbuka",
+                "Persentase Penduduk Miskin (P0) Menurut Kabupaten/Kota (Persen)",
+                "Rata-rata Lama Sekolah Penduduk 15+ (Tahun)",
+                "Umur Harapan Hidup (Tahun)",
+                "Persentase rumah tangga yang memiliki akses terhadap sanitasi layak"
+          ]
+
+          df = pd.read_csv(data_path)
+          df["Is_Jawa"] = df["Provinsi"].apply(
+
+                lambda x: "Jawa" if str(x).upper() in jawa_provinces else "Luar Jawa"
+          )
+          df["PDRB_Log"] = np.log1p(df[pdrb_col])
+          df = df.dropna(subset=fitur_utama).reset_index(drop=True)
+
+          Sumber data : Klasifikasi Tingkat Kemiskinan di Indonesia.csv
+Dimensi awal: 514 baris × 13 kolom
+
+Missing values total: 0
+
+Baris duplikat          :0
+
+Dimensi setelah pembersihan: 514 baris × 15 kolom
+
+Distribusi wilayah:
+
+Jawa       : 119 Kab/Kota (23.2%)
+
+Luar Jawa : 395 Kab/Kota (76.8%)
+
+Transformasi PDRB:
+
+Skewness PDRB asli          : 5.8527 (extremely right-skewed)
+
+Skewness PDRB log1p         : 0.2310 (mendekati normal)
+
+Berikut adalah ringkasan statistik deskriptif untuk 6 fitur utama beserta PDRB dalam skala asli:
+
+Statistik  PDRB_Log TPT (%) Miskin (%)           Sekolah  UHH (Th)            Sanitasi  PDRB Asli
+                                                   (Th)                         (%)     (Juta Rp)
+  mean     16.0124          5.0595      12.2732   8.4366    69.6568
+   std     1.2682           2.6370      7.4587    1.6308    3.4475            77.2022     21.9641
+   min     11.9015          0.0000      2.3800    1.4200    55.4300           18.5836     47.9049
+  50%      15.9919          4.5650      10.4550   8.3050    69.9750            0.0000      0.1475
+   max     19.9469          13.3700     41.6600             77.7300           81.8000      8.8149
+                                                 12.8300                      99.9700    460.0810
+
+Tahap 2: Standardisasi Fitur (Feature Scaling)
+
+Sebelum menerapkan klasterisasi, nilai nominal setiap fitur harus disamakan skalanya agar tidak terjadi
+dominasi oleh fitur dengan satuan nilai besar (seperti PDRB_Log vs TPT). Pustaka StandardScaler dari
+scikit-learn digunakan untuk mentransformasikan 6 fitur utama agar terpusat dengan rata-rata (mean) 0
+dan standar deviasi (std) 1.
+
+          # TAHAP 2: Standardisasi Fitur
+          raw_data = df[fitur_utama].copy()
+          scaler = StandardScaler()
+          scaled_features = scaler.fit_transform(raw_data)
+
+Perbandingan statistik fitur utama sebelum dan sesudah proses standardisasi:
+
+Fitur Kesejahteraan     Mean (Sebelum)  Std (Sebelum)     Mean (Sesudah)      Std (Sesudah)
+                              16.0124        1.2682             0.0000             1.0010
+       PDRB_Log                5.0595        2.6370             0.0000             1.0010
+                              12.2732        7.4587             0.0000             1.0010
+Tingkat Pengangguran           8.4366        1.6308             0.0000             1.0010
+     Terbuka (TPT)            69.6568        3.4475             0.0000             1.0010
+                              77.2022       18.5836             0.0000             1.0010
+ Persentase Penduduk
+       Miskin (P0)
+
+Rata-rata Lama Sekolah
+     Penduduk 15+
+
+ Umur Harapan Hidup
+         (Tahun)
+
+   Persentase Rumah
+Tangga Sanitasi Layak
+Tahap 3: Optimasi Jumlah Klaster (Elbow Method & Silhouette Score)
+
+Penentuan K (jumlah klaster) optimal dievaluasi menggunakan metode Elbow (mengukur inersia /
+
+WCSS) serta Silhouette Score untuk melihat kerapatan struktur klaster. Algoritma melakukan pencarian
+
+otomatis pada rentang K=2 hingga K=10. Nilai K optimal didapatkan secara matematis melalui jarak
+
+ortogonal terjauh dari garis regresi linier batas atas-bawah (siku) yang mendeteksi K=4 sebagai titik
+
+potong terbaik.
+
+          # TAHAP 3: Optimasi Jumlah Klaster (Elbow Method - WCSS)
+          k_range = range(2, 11)
+          wcss_values = []
+          sil_scores = []
+          for k in k_range:
+
+                km = KMeans(n_clusters=k, init="k-means++", n_init=10, random_state=42)
+                labels = km.fit_predict(scaled_features)
+                wcss_values.append(km.inertia_)
+                sil_scores.append(silhouette_score(scaled_features, labels))
+
+Berikut adalah tabel perbandingan performa WCSS dan Silhouette Score untuk setiap nilai K:
+
+K (Klaster)  WCSS (Inertia)  Delta WCSS  Silhouette Score
+       2          2124.19           --         0.2692
+       3          1645.89                      0.2722
+                  1387.47       -478.29        0.2204
+4 (Optimal)       1263.52       -258.42        0.1829
+       5          1162.68       -123.95        0.1827
+       6          1079.00       -100.83        0.2003
+       7          1007.97        -83.68        0.1797
+       8           949.84        -71.03        0.1921
+       9           894.41        -58.13        0.1947
+      10                         -55.43
+                        Gambar 1. Grafik WCSS (Elbow Method) untuk Estimasi Jumlah Klaster Optimal
+
+Tahap 4: Pelatihan Model K-Means & Feature Importance
+
+Model K-Means dilatih menggunakan parameter K=4. Untuk memvalidasi kontribusi visual dan teoretis
+dari klaster yang terbentuk, program melatih algoritma klasifikasi Random Forest dengan variabel
+independen berupa 6 fitur utama dan target berupa label klaster. Nilai 'Feature Importance' diekstraksi
+untuk mengetahui kontribusi relatif fitur dalam pembagian kelompok kesejahteraan.
+
+          # TAHAP 4: Pelatihan Model K-Means & Random Forest
+          km_model = KMeans(n_clusters=k_optimal, init="k-means++", n_init=10, random_state=42)
+          df["Klaster"] = km_model.fit_predict(scaled_features)
+
+          rf = RandomForestClassifier(n_estimators=100, random_state=42)
+          rf.fit(scaled_features, df["Klaster"])
+          importances = rf.feature_importances_
+
+Hasil ekstraksi nilai kepentingan fitur (Feature Importance) menggunakan Random Forest:
+
+Rank            Fitur Kesejahteraan                                     Importance Score
+  1                                                                             0.2609
+  2         Umur Harapan Hidup (Tahun)                                          0.1843
+  3                                                                             0.1680
+       Tingkat Pengangguran Terbuka (TPT)
+  4                                                                             0.1594
+  5    Rata-rata Lama Sekolah Penduduk 15+                                      0.1290
+                          (Tahun)
+  6                                                                             0.0985
+                       PDRB_Log
+
+          Persentase Penduduk Miskin (P0)
+               menurut Kabupaten/Kota
+
+      Persentase Rumah Tangga dengan Akses
+                     Sanitasi Layak
+
+Nilai rata-rata dari 6 fitur utama pada masing-masing klaster K-Means:
+Klaster    PDRB_Log                TPT (%)   Miskin (%)  Sekolah (Th)    UHH (Th)   Sanitasi (%)
+Klaster 0    15.1611                 4.0440    15.4773       8.2385        66.6661     72.0239
+Klaster 1    17.2057                 8.7671     7.1017      10.2992        72.7341     89.6992
+Klaster 2    14.0136                 1.8384    31.2906       5.1909        64.8809     30.6806
+Klaster 3    16.3490                 4.5218     9.6653       8.1804        71.0326     81.7721
+
+Tahap 5: Analisis Spasial & Pembuktian Hipotesis Jawa-Sentris
+
+Tahap ini merupakan inti dari pembuktian hipotesis ketimpangan pembangunan. Klaster diurutkan
+berdasarkan rata-rata variabel kemiskinan secara descending dan dipetakan ke 4 Tipologi Polarisasi.
+Analisis tabulasi silang (cross-tabulation) persentase dan jumlah absolut antara letak wilayah (Is_Jawa)
+dengan Tipologi Polarisasi membuktikan bahwa 41.2% wilayah Pulau Jawa tergolong 'Maju di Semua
+Indikator', sementara 0.0% wilayah Jawa masuk kategori 'Tertinggal'. Sebaliknya, kategori 'Tertinggal'
+secara eksklusif diduduki oleh wilayah di Luar Jawa (8.1%).
+
+          # TAHAP 5: Analisis Spasial Jawa-Sentris
+          miskin_col = "Persentase Penduduk Miskin (P0) Menurut Kabupaten/Kota (Persen)"
+          avg_miskin = df.groupby("Klaster")[miskin_col].mean().sort_values(ascending=False)
+          labels = ["Tertinggal di Semua Indikator", "Berkembang (Kemiskinan Menengah-Tinggi)",
+
+                          "Berkembang (Kemiskinan Menengah-Rendah)", "Maju di Semua Indikator"]
+
+          peta_tipologi = {k: labels[i] for i, k in enumerate(avg_miskin.index)}
+          df["Tipologi Polarisasi"] = df["Klaster"].map(peta_tipologi)
+
+          crosstab = pd.crosstab(df["Tipologi Polarisasi"], df["Is_Jawa"], normalize="columns") * 100
+          crosstab_abs = pd.crosstab(df["Tipologi Polarisasi"], df["Is_Jawa"])
+
+Distribusi persentase tipologi kesejahteraan wilayah Jawa vs Luar Jawa:
+
+         Tipologi Polarisasi                 Jawa (%)                    Luar Jawa (%)
+                                                52.94                           40.25
+Berkembang (Kemiskinan Menengah-
+                  Rendah)                       5.88                            37.97
+
+Berkembang (Kemiskinan Menengah-                41.18                           13.67
+                  Tinggi)                       0.00                            8.10
+
+        Maju di Semua Indikator
+    Tertinggal di Semua Indikator
+
+Distribusi jumlah absolut kabupaten/kota pada masing-masing tipologi:
+
+  Tipologi Polarisasi    Jawa (Kab/Kota)     Luar Jawa (Kab/Kota)                   Total
+                                   63                     159                        222
+Berkembang (Kemiskinan              7                     150                        157
+   Menengah-Rendah)                49                      54                        103
+
+Berkembang (Kemiskinan
+    Menengah-Tinggi)
+
+Maju di Semua Indikator
+Tertinggal di Semua Indikator  0                     32                               32
+
+Perbandingan rata-rata indikator kesejahteraan antara Jawa dan Luar Jawa:
+
+Wilayah    PDRB_Log            TPT (%)   Miskin (%)  Sekolah (Th)          UHH (Th)   Sanitasi (%)
+   Jawa      17.2148             6.8622    10.3372       8.4390              72.8069     81.4581
+             15.6502             4.5164    12.8564       8.4359              68.7078     75.9201
+Luar Jawa
+
+Tahap 6: Proyeksi Visual 2D (Scatter Plot)
+
+Menggunakan dua fitur teratas hasil Random Forest Feature Importance (yaitu Umur Harapan Hidup pada
+
+sumbu X dan Tingkat Pengangguran Terbuka pada sumbu Y), program melakukan proyeksi sebaran data
+
+secara dua dimensi. Peta sebaran ini memperlihatkan struktur pemisahan klaster dan anomali kewilayahan
+
+secara grafis.
+
+          # TAHAP 6: Visualisasi Scatter Plot
+          fitur_x = fitur_utama[top_features_idx[0]]
+          fitur_y = fitur_utama[top_features_idx[1]]
+
+          plt.figure(figsize=(14, 8))
+          palet_warna = sns.color_palette("Set1", n_colors=k_optimal)
+          sns.scatterplot(
+
+                data=df, x=fitur_x, y=fitur_y,
+                hue="Tipologi Polarisasi", style="Is_Jawa",
+                palette=palet_warna, s=120, alpha=0.85, edgecolor="white"
+          )
+          plt.title(f"Proyeksi Spasial Ketimpangan Wilayah (Jawa vs Luar Jawa)\n{fitur_x} vs
+          {fitur_y}", fontsize=14, fontweight="bold")
+          plt.legend(bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0.)
+          plt.tight_layout()
+          plt.savefig("scatter_jawasentris.png", dpi=150)
+          plt.close()
+                               Gambar 2. Scatter Plot Proyeksi Spasial Fitur Kesejahteraan Dominan
+
+Tahap 7: Pemetaan Spasial (Choropleth Map)
+
+Untuk memvisualisasikan ketimpangan secara spasial di seluruh Indonesia, dilakukan merge geografis
+antara batas administrasi kabupaten/kota (format GeoJSON) dengan hasil klasterisasi dataframe. Program
+menggunakan pustaka GeoPandas untuk me-load data spasial, melakukan pencocokan nama daerah yang
+selisih secara otomatis, dan merender peta choropleth berwarna sesuai pembagian klaster.
+
+          # TAHAP 7: Pemetaan Geospatial
+          geojson_path = "dataset/kota-kabupaten.json"
+          gdf = gpd.read_file(geojson_path)
+          # Melakukan merge spasial dan plotting peta
+          # merged_gdf = gdf.merge(df, left_on="clean_name", right_on="mapped_clean_kab", how="left")
+          # merged_gdf.plot(...)
+          # plt.savefig("map_jawasentris_indonesia.png", dpi=300)
+                             Gambar 3. Peta Choropleth Persebaran Klaster Kesejahteraan Indonesia
+
+Tahap 8: Ekspor Data Akhir
+
+Langkah penutup dari pipeline machine learning ini adalah mengekspor dataset yang telah diperkaya oleh
+label klaster dan tipologi kesejahteraan spasial ke dalam file CSV baru. Hal ini memudahkan integrasi
+data dengan platform dashboard Streamlit maupun aplikasi pelaporan lainnya.
+
+          # TAHAP 8: Ekspor Hasil Akhir
+          ekspor_path = os.path.join(self.base_dir, "Hasil_Klasterisasi_JawaSentris.csv")
+          export_cols = ["Provinsi", "Kab/Kota", "Is_Jawa"] + fitur_utama + ["Klaster", "Tipologi
+          Polarisasi"]
+          df[export_cols].to_csv(ekspor_path, index=False)
+
+Berikut adalah sampel data 20 baris pertama hasil ekspor klasterisasi:
+
+Provinsi  Kab/Kota       Wilayah                                        Klaster  Tipologi Polarisasi
+ ACEH      Simeulue      Luar Jawa                                          0
+                                                                                     Berkembang
+ACEH      Aceh Singkil   Luar Jawa                                      0            (Kemiskinan
+                                                                                  Menengah-Tinggi)
+ACEH      Aceh Selatan   Luar Jawa                                      0
+                                                                                     Berkembang
+ACEH      Aceh Tenggara  Luar Jawa                                      0            (Kemiskinan
+                                                                                  Menengah-Tinggi)
+ACEH      Aceh Timur     Luar Jawa                                      0
+                                                                                     Berkembang
+                                                                                     (Kemiskinan
+                                                                                  Menengah-Tinggi)
+
+                                                                                     Berkembang
+                                                                                     (Kemiskinan
+                                                                                  Menengah-Tinggi)
+
+                                                                                     Berkembang
+                                                                                     (Kemiskinan
+                                                                                  Menengah-Tinggi)
+ACEH    Aceh Tengah    Luar Jawa  0  Berkembang
+ACEH     Aceh Barat    Luar Jawa
+ACEH     Aceh Besar    Luar Jawa     (Kemiskinan
+ACEH                   Luar Jawa
+ACEH         Pidie     Luar Jawa     Menengah-Tinggi)
+ACEH       Bireuen     Luar Jawa
+ACEH     Aceh Utara    Luar Jawa  0  Berkembang
+ACEH  Aceh Barat Daya  Luar Jawa
+ACEH      Gayo Lues    Luar Jawa     (Kemiskinan
+ACEH   Aceh Tamiang    Luar Jawa
+ACEH     Nagan Raya    Luar Jawa     Menengah-Tinggi)
+ACEH      Aceh Jaya    Luar Jawa
+ACEH    Bener Meriah   Luar Jawa  1  Maju di Semua
+ACEH      Pidie Jaya   Luar Jawa
+ACEH  Kota Banda Aceh  Luar Jawa     Indikator
+        Kota Sabang
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  3  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Rendah)
+
+                                  3  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Rendah)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  3  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Rendah)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+
+                                  1  Maju di Semua
+
+                                     Indikator
+
+                                  0  Berkembang
+
+                                     (Kemiskinan
+
+                                     Menengah-Tinggi)
+

@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* 
+Academia Design System (Light Scale)
+- Cormorant Garamond: Display Headings, Section Headings, Subsections, Metrics
+- Crimson Pro: Body text, inputs, tooltips
+- Cinzel: Buttons, Drop Caps, Overline Labels, Card labels
+*/
+
+/* Base Scale & Fonts */
+html, body, [class*="css"], .stApp {
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 16px !important;
+}
+
+/* Titles & Headers (Cormorant Garamond) */
+h1 { 
+    font-family: 'Cormorant Garamond', serif !important; 
+    font-size: 2.2rem !important; 
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+}
+h2 { 
+    font-family: 'Cormorant Garamond', serif !important; 
+    font-size: 1.8rem !important; 
+    color: var(--text-primary) !important; 
+    font-weight: 600 !important;
+}
+h3 { 
+    font-family: 'Cormorant Garamond', serif !important; 
+    font-size: 1.5rem !important; 
+    color: var(--text-primary) !important;
+    border-bottom: 1px solid var(--border-standard) !important; 
+    padding-bottom: 0.5rem !important; 
+}
+h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: var(--text-primary) !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+}
+.volume-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: #8a620b !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+}
+
+/* Overline Labels, Drop Caps & Buttons (Cinzel) */
+.cinzel-label {
+    font-family: 'Cinzel', serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600 !important;
+    color: var(--accent-brass) !important;
+    font-size: 0.8rem !important;
+}
+.volume-overline {
+    font-family: 'Cinzel', serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600 !important;
+    color: #8a620b !important;
+    font-size: 0.8rem !important;
+}
+.drop-cap:first-letter {
+    font-family: 'Cinzel', serif !important;
+    color: var(--accent-brass);
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    padding-right: 8px;
+}
+.stButton > button {
+    background: var(--btn-grad) !important;
+    color: var(--btn-text) !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    font-size: 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.2rem 0.6rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+/* Paragraphs (Crimson Pro) */
+p, li {
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-primary) !important;
+}
+/* Specifically target markdown text so it doesn't break icons */
+.stMarkdown p, .stMarkdown li, .stMarkdown span {
+    font-family: 'Crimson Pro', serif;
+}
+/* Ensure Material Symbols are preserved */
+.material-symbols-rounded, span[class*="material"] {
+    font-family: 'Material Symbols Rounded' !important;
+}
+p strong, span b {
+    color: var(--text-primary);
+}
+
+/* Metrics */
+[data-testid="stMetricValue"] {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: var(--text-primary) !important;
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+}
+[data-testid="stMetricLabel"] {
+    font-family: 'Cinzel', serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary) !important;
+    font-size: 0.85rem !important;
+}
+
+/* Unified Academia Cards (Aged Oak / Secondary Bg) */
+.academia-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-standard);
+    border-radius: 8px !important;
+    padding: 1.2rem;
+    height: 100% !important; /* Uniform height for cards */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+[data-testid="metric-container"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--border-standard) !important;
+    background: #1C1714 !important; /* Dark brown for sidebar */
+}
+[data-testid="stSidebar"] hr {
+    border-color: var(--border-standard) !important;
+}
+[data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] div, [data-testid="stSidebar"] h2 {
+    color: #F3EFE9 !important; /* Light text on dark background */
+}
+/* Ensure the nav links get the correct colors */
+[data-testid="stSidebar"] .nav-link {
+    color: #F3EFE9 !important;
+}
+[data-testid="stSidebar"] .nav-link-selected {
+    background-color: #F3EFE9 !important;
+    color: #1C1714 !important;
+    font-weight: bold !important;
+    border-radius: 8px !important;
+}
+
+/* Folium Tooltips */
+.leaflet-tooltip {
+    background-color: #F3EFE9 !important;
+    border: 1px solid #9C8B7A !important;
+    border-radius: 8px !important;
+    color: #1C1714 !important;
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 14px !important;
+    white-space: normal !important;
+    min-width: 350px;
+    max-width: 500px;
+    padding: 12px 16px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    text-align: left !important;
+    line-height: 1.5 !important;
+}
+.leaflet-tooltip table {
+    color: var(--text-primary) !important;
+    width: 100%;
+}
+.leaflet-tooltip th {
+    text-align: left;
+    padding-right: 12px;
+    color: var(--text-secondary) !important;
+}
+
+/* Form inputs (Crimson Pro) */
+input, select, .stSelectbox > div > div, .stTextInput > div > div, .stNumberInput > div > div {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-standard) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px !important;
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 15px !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.2rem !important;
+    color: var(--text-primary) !important;
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--border-standard) !important;
+}
+
+/* Ornate Divider */
+.ornate-divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    position: relative;
+}
+.ornate-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--border-standard) 20%, var(--accent-brass) 50%, var(--border-standard) 80%, transparent 100%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+.ornate-glyph {
+    color: var(--accent-brass);
+    font-size: 15px;
+    padding: 0 16px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+}
+
+/* ---- Fixes for UI components ---- */
+
+/* Placeholders in inputs */
+::placeholder, .stTextInput input::placeholder, .stNumberInput input::placeholder {
+    color: #9C8B7A !important;
+    opacity: 1 !important;
+}
+
+/* Hide Streamlit's "Press Enter to apply" hint */
+div[data-testid="InputInstructions"] {
+    display: none !important;
+}
+
+/* Selectbox dropdown popup */
+div[data-baseweb="popover"] ul, div[data-baseweb="select"] ul { 
+    background-color: #F3EFE9 !important; 
+}
+div[data-baseweb="popover"] li, div[data-baseweb="popover"] li span, div[data-baseweb="popover"] li div,
+div[data-baseweb="select"] li, div[data-baseweb="select"] li span, div[data-baseweb="select"] li div { 
+    color: #1C1714 !important; 
+}
+
+/* Expander headers readability */
+[data-testid="stExpander"] details summary, [data-testid="stExpander"] details summary p {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.2rem !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-card) !important;
+}
+[data-testid="stExpander"] details {
+    border-color: var(--border-standard) !important;
+    background-color: transparent !important;
+}
+
+/* st.info box used for the Narrative Insight */
+[data-testid="stAlert"] {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-standard) !important;
+    border-left: 4px solid var(--accent-brass) !important;
+    color: var(--text-primary) !important;
+}
+[data-testid="stAlert"] p, [data-testid="stAlert"] span {
+    color: var(--text-primary) !important;
+}
+[data-testid="stAlert"] [data-testid="stMarkdownContainer"] {
+    color: var(--text-primary) !important;
+}
+[data-testid="stAlert"] svg {
+    display: none !important; /* Hide default info icon if we use custom emoji */
+}
+
+/* ================== ADDITIONAL ENHANCEMENTS ================== */
+/* 1. Style number input arrows/steppers */
+div[data-testid="stNumberInputStepUp"], div[data-testid="stNumberInputStepDown"] {
+    background-color: #E8DFD4 !important; /* Latar krim/coklat muda */
+    color: #1C1714 !important;
+    border: none !important;
+}
+div[data-testid="stNumberInputStepUp"]:hover, div[data-testid="stNumberInputStepDown"]:hover {
+    background-color: #D4B872 !important;
+}
+
+/* 2. Styling Kotak Input (Border Radius, Transition, Focus Effect) */
+.stTextInput input, .stNumberInput input, .stSelectbox div[data-baseweb="select"] {
+    border-radius: 8px !important;
+    border: 1px solid #9C8B7A !important;
+    transition: all 0.3s ease !important;
+}
+.stTextInput input:focus, .stNumberInput input:focus, .stSelectbox div[data-baseweb="select"]:focus-within {
+    border-color: #8a620b !important;
+    box-shadow: 0 0 0 3px rgba(138, 98, 11, 0.15) !important;
+}
+
+/* 3. Spacing & Margin (Scannability) */
+div[data-testid="stNumberInput"], div[data-testid="stTextInput"], div[data-testid="stSelectbox"] {
+    margin-bottom: 24px !important;
+}
+
+/* 4. Styling Tombol (All Buttons) */
+.stButton > button {
+    padding: 2px 8px !important;
+    font-size: 10px !important;
+    margin-top: 15px !important;
+    border-radius: 8px !important;
+    min-height: 28px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 98, 11, 0.25) !important;
+}
+
+/* --- Streamlit File Uploader Text & Layout Override --- */
+[data-testid="stFileUploader"] {
+    background-color: #F8F5F0 !important; /* Latar belakang hangat dan bersih */
+    border: 2px dashed var(--border-standard) !important; /* Garis tepi dashed yang elegan */
+    border-radius: 8px !important;
+    padding: 24px 20px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+    transition: all 0.3s ease !important;
+}
+[data-testid="stFileUploader"]:hover {
+    border-color: var(--accent-brass) !important;
+    box-shadow: 0 4px 12px rgba(166, 134, 65, 0.1) !important;
+}
+[data-testid="stFileUploader"] [data-testid="stBaseButton-secondary"] {
+    background-color: var(--accent-brass) !important;
+    background-image: none !important;
+    color: var(--bg-base) !important;
+    border: none !important;
+    box-shadow: none !important; /* Hilangkan bayangan ganda */
+    text-shadow: none !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: bold !important;
+    transition: all 0.2s ease !important;
+}
+[data-testid="stFileUploader"] [data-testid="stBaseButton-secondary"]:hover {
+    background-color: #8a620b !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+/* Force all text in uploader box to display in dark brown/black */
+[data-testid="stFileUploader"] label, 
+[data-testid="stFileUploader"] p, 
+[data-testid="stFileUploader"] span, 
+[data-testid="stFileUploader"] div {
+    color: #1C1714 !important;
+    font-family: 'Crimson Pro', serif !important;
+}
+[data-testid="stFileUploader"] label {
+    font-weight: bold !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 8px !important;
+}
+
+

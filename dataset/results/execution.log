@@ -1,0 +1,485 @@
+2026-06-17 15:16:51,623 - INFO - Memulai jalannya seluruh pipeline eksperimen...
+2026-06-17 15:16:51,623 - INFO - Memulai Langkah 1: Preprocessing & Outlier Detection
+2026-06-17 15:16:51,636 - INFO - Menerapkan PowerTransformer (Yeo-Johnson)...
+2026-06-17 15:16:51,691 - INFO - Mengeksekusi Isolation Forest (contamination=0.05)...
+2026-06-17 15:16:51,851 - INFO - Langkah 1 selesai. Inliers: 488, Outliers: 26
+2026-06-17 15:16:51,852 - INFO - Memulai Langkah 2: Modeling Hybrid
+2026-06-17 15:16:51,883 - INFO - HDBSCAN library terdeteksi. Mengeksekusi modeling hybrid...
+2026-06-17 15:16:51,906 - INFO - HDBSCAN mendeteksi 4 klaster padat secara spasial.
+2026-06-17 15:16:51,906 - INFO - Menginjeksi centroid HDBSCAN ke K-Means (Deterministic Init)...
+2026-06-17 15:16:53,941 - INFO - Langkah 2 Modeling selesai.
+2026-06-17 15:16:53,941 - INFO - Memulai Langkah 3: Evaluasi & Uji Stabilitas
+2026-06-17 15:16:53,963 - INFO - Silhouette: 0.1891, DBI: 1.6715, CHI: 155.6819
+2026-06-17 15:16:54,709 - INFO - Stabilitas (ARI Rata-rata): 0.8966 (Std: 0.0405)
+2026-06-17 15:16:54,709 - INFO - Langkah 3 selesai.
+2026-06-17 15:16:54,709 - INFO - Memulai Langkah 4: Analisis Sensitivitas Scaler & Outliers
+2026-06-17 15:16:57,008 - INFO - Langkah 4 selesai. Data tersimpan di dataset/results/tables/sensitivity_analysis.csv
+2026-06-17 15:16:57,008 - INFO - Memulai Langkah 5: Profiling & Uji Hipotesis Statistik
+2026-06-17 15:16:57,029 - INFO - Uji Kruskal-Wallis TPT: Stat=187.0516, p-value=2.6454e-40
+2026-06-17 15:16:57,049 - INFO - Uji Chi-Square Jawa-Sentris: Stat=205.2667, p-value=3.0698e-44
+2026-06-17 15:16:57,049 - INFO - Langkah 5 selesai.
+2026-06-17 15:16:57,049 - INFO - Memulai Langkah 6: Generasi Visualisasi Grafik
+2026-06-17 15:16:59,445 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:16:59,454 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:16:59,505 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:16:59,514 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:17:00,781 - INFO - Langkah 6 selesai. Visualisasi disimpan di dataset/results/figures/
+2026-06-17 15:17:00,781 - INFO - Memulai Langkah 7: Pembuatan Laporan PDF (Swiss Style)
+2026-06-17 15:17:01,164 - INFO - Laporan PDF (Swiss Style) berhasil disimpan di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 15:17:01,164 - INFO - PIPELINE EKSPERIMEN SELESAI SELURUHNYA.
+2026-06-17 15:18:06,033 - INFO - Memulai jalannya seluruh pipeline eksperimen...
+2026-06-17 15:18:06,033 - INFO - Memulai Langkah 1: Preprocessing & Outlier Detection
+2026-06-17 15:18:06,038 - INFO - Menerapkan PowerTransformer (Yeo-Johnson)...
+2026-06-17 15:18:06,095 - INFO - Mengeksekusi Isolation Forest (contamination=0.05)...
+2026-06-17 15:18:06,213 - INFO - Langkah 1 selesai. Inliers: 488, Outliers: 26
+2026-06-17 15:18:06,214 - INFO - Memulai Langkah 2: Modeling Hybrid
+2026-06-17 15:18:06,222 - INFO - HDBSCAN library terdeteksi. Mengeksekusi modeling hybrid...
+2026-06-17 15:18:06,231 - INFO - HDBSCAN mendeteksi 4 klaster padat secara spasial.
+2026-06-17 15:18:06,232 - INFO - Menginjeksi centroid HDBSCAN ke K-Means (Deterministic Init)...
+2026-06-17 15:18:07,618 - INFO - Langkah 2 Modeling selesai.
+2026-06-17 15:18:07,618 - INFO - Memulai Langkah 3: Evaluasi & Uji Stabilitas
+2026-06-17 15:18:07,644 - INFO - Silhouette: 0.1891, DBI: 1.6715, CHI: 155.6819
+2026-06-17 15:18:08,361 - INFO - Stabilitas (ARI Rata-rata): 0.8966 (Std: 0.0405)
+2026-06-17 15:18:08,361 - INFO - Langkah 3 selesai.
+2026-06-17 15:18:08,361 - INFO - Memulai Langkah 4: Analisis Sensitivitas Scaler & Outliers
+2026-06-17 15:18:10,705 - INFO - Langkah 4 selesai. Data tersimpan di dataset/results/tables/sensitivity_analysis.csv
+2026-06-17 15:18:10,705 - INFO - Memulai Langkah 5: Profiling & Uji Hipotesis Statistik
+2026-06-17 15:18:10,720 - INFO - Uji Kruskal-Wallis TPT: Stat=187.0516, p-value=2.6454e-40
+2026-06-17 15:18:10,735 - INFO - Uji Chi-Square Jawa-Sentris: Stat=205.2667, p-value=3.0698e-44
+2026-06-17 15:18:10,736 - INFO - Langkah 5 selesai.
+2026-06-17 15:18:10,736 - INFO - Memulai Langkah 6: Generasi Visualisasi Grafik
+2026-06-17 15:18:12,353 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:18:12,365 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:18:12,431 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:18:12,438 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 15:18:13,700 - INFO - Langkah 6 selesai. Visualisasi disimpan di dataset/results/figures/
+2026-06-17 15:18:13,700 - INFO - Memulai Langkah 7: Pembuatan Laporan PDF (Swiss Style)
+2026-06-17 15:18:14,111 - INFO - Laporan PDF (Swiss Style) berhasil disimpan di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 15:18:14,112 - INFO - PIPELINE EKSPERIMEN SELESAI SELURUHNYA.
+2026-06-17 16:28:05,260 - INFO - Memulai jalannya seluruh pipeline eksperimen...
+2026-06-17 16:28:05,260 - INFO - Memulai Langkah 1: Preprocessing & Outlier Detection
+2026-06-17 16:28:05,266 - INFO - Menerapkan PowerTransformer (Yeo-Johnson)...
+2026-06-17 16:28:05,322 - INFO - Mengeksekusi Isolation Forest (contamination=0.05)...
+2026-06-17 16:28:05,432 - INFO - Langkah 1 selesai. Inliers: 488, Outliers: 26
+2026-06-17 16:28:05,432 - INFO - Memulai Langkah 2: Modeling Hybrid
+2026-06-17 16:28:05,440 - INFO - HDBSCAN library terdeteksi. Mengeksekusi modeling hybrid...
+2026-06-17 16:28:05,449 - INFO - HDBSCAN mendeteksi 4 klaster padat secara spasial.
+2026-06-17 16:28:05,449 - INFO - Menginjeksi centroid HDBSCAN ke K-Means (Deterministic Init)...
+2026-06-17 16:28:06,996 - INFO - Langkah 2 Modeling selesai.
+2026-06-17 16:28:06,996 - INFO - Memulai Langkah 3: Evaluasi & Uji Stabilitas
+2026-06-17 16:28:07,004 - INFO - Silhouette: 0.1891, DBI: 1.6715, CHI: 155.6819
+2026-06-17 16:28:07,737 - INFO - Stabilitas (ARI Rata-rata): 0.8966 (Std: 0.0405)
+2026-06-17 16:28:07,737 - INFO - Langkah 3 selesai.
+2026-06-17 16:28:07,737 - INFO - Memulai Langkah 4: Analisis Sensitivitas Scaler & Outliers
+2026-06-17 16:28:09,962 - INFO - Langkah 4 selesai. Data tersimpan di dataset/results/tables/sensitivity_analysis.csv
+2026-06-17 16:28:09,962 - INFO - Memulai Langkah 5: Profiling & Uji Hipotesis Statistik
+2026-06-17 16:28:09,978 - INFO - Uji Kruskal-Wallis TPT: Stat=187.0516, p-value=2.6454e-40
+2026-06-17 16:28:09,986 - INFO - Uji Chi-Square Jawa-Sentris: Stat=205.2667, p-value=3.0698e-44
+2026-06-17 16:28:09,986 - INFO - Langkah 5 selesai.
+2026-06-17 16:28:09,986 - INFO - Memulai Langkah 6: Generasi Visualisasi Grafik
+2026-06-17 16:28:11,434 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 16:28:11,437 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 16:28:11,486 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 16:28:11,486 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 16:28:12,749 - INFO - Langkah 6 selesai. Visualisasi disimpan di dataset/results/figures/
+2026-06-17 16:28:12,749 - INFO - Memulai Langkah 7: Pembuatan Laporan PDF
+2026-06-17 16:28:13,079 - INFO - Laporan PDF berhasil disimpan di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 16:28:13,079 - INFO - PIPELINE EKSPERIMEN SELESAI SELURUHNYA.
+2026-06-17 22:11:05,437 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:11:05,626 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:11:07,343 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:11:07,655 - INFO - Hopkins Tendency        : 0.7307
+2026-06-17 22:11:07,655 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:11:07,655 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:11:07,655 - INFO - INVENSI METRIK: WCVI     : 0.6849
+2026-06-17 22:11:10,537 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:11:10,539 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:12:03,269 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:12:03,442 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:12:04,836 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:12:05,139 - INFO - Hopkins Tendency        : 0.7133
+2026-06-17 22:12:05,139 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:12:05,139 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:12:05,139 - INFO - INVENSI METRIK: WCVI     : 0.6797
+2026-06-17 22:12:07,816 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:12:07,816 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:12:07,816 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:12:07,847 - INFO - LANGKAH 5: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:12:08,037 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:12:08,037 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:16:56,047 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:16:56,213 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:16:57,675 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:16:57,889 - INFO - Hopkins Tendency        : 0.7187
+2026-06-17 22:16:57,889 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:16:57,889 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:16:57,889 - INFO - INVENSI METRIK: WCVI     : 0.6813
+2026-06-17 22:16:59,918 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:16:59,918 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:16:59,918 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:16:59,934 - INFO - LANGKAH 5: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:17:00,080 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:17:00,081 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:30:02,048 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:30:02,213 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:30:03,635 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:30:03,889 - INFO - Hopkins Tendency        : 0.7187
+2026-06-17 22:30:03,889 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:30:03,889 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:30:03,889 - INFO - INVENSI METRIK: WCVI     : 0.6813
+2026-06-17 22:30:06,361 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:30:06,361 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:30:06,361 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:30:06,377 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 22:30:08,170 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:30:08,182 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:30:08,902 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 22:30:08,902 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:30:09,167 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:30:09,167 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:32:41,738 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:32:41,903 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:32:43,277 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:32:43,466 - INFO - Hopkins Tendency        : 0.7258
+2026-06-17 22:32:43,466 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:32:43,466 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:32:43,466 - INFO - INVENSI METRIK: WCVI     : 0.6834
+2026-06-17 22:32:45,485 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:32:45,485 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:32:45,485 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:32:45,502 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 22:32:46,573 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:32:46,579 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:32:47,200 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 22:32:47,201 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:32:47,385 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:32:47,385 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:39:17,631 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:39:17,834 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:39:19,223 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:39:19,413 - INFO - Hopkins Tendency        : 0.7241
+2026-06-17 22:39:19,413 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:39:19,413 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:39:19,413 - INFO - INVENSI METRIK: WCVI     : 0.6829
+2026-06-17 22:39:21,391 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:39:21,391 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:39:21,391 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:39:21,415 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 22:39:22,307 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:39:22,314 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-17 22:39:23,091 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 22:39:23,091 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:39:23,272 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:39:23,272 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:55:44,106 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:55:44,273 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:55:45,743 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:55:46,005 - INFO - Hopkins Tendency        : 0.7607
+2026-06-17 22:55:46,005 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:55:46,005 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:55:46,005 - INFO - INVENSI METRIK: WCVI     : 0.6939
+2026-06-17 22:55:48,666 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:55:48,666 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:55:48,666 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:55:48,683 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 22:55:50,539 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 22:55:50,539 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:55:50,738 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:55:50,738 - INFO - Pipeline HKI Selesai.
+2026-06-17 22:58:09,270 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 22:58:09,423 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 22:58:10,784 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 22:58:10,962 - INFO - Hopkins Tendency        : 0.7296
+2026-06-17 22:58:10,962 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 22:58:10,963 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 22:58:10,963 - INFO - INVENSI METRIK: WCVI     : 0.6846
+2026-06-17 22:58:12,996 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 22:58:12,996 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 22:58:12,999 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 22:58:13,011 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 22:58:14,470 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 22:58:14,470 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 22:58:14,661 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 22:58:14,661 - INFO - Pipeline HKI Selesai.
+2026-06-17 23:00:29,607 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-17 23:00:29,773 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-17 23:00:31,127 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-17 23:00:31,316 - INFO - Hopkins Tendency        : 0.7210
+2026-06-17 23:00:31,316 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-17 23:00:31,316 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-17 23:00:31,316 - INFO - INVENSI METRIK: WCVI     : 0.6820
+2026-06-17 23:00:33,317 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-17 23:00:33,317 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-17 23:00:33,317 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-17 23:00:33,335 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-17 23:00:35,007 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-17 23:00:35,008 - INFO - LANGKAH 6: PDF Laporan Dokumentasi Teknis
+2026-06-17 23:00:35,197 - INFO - Laporan PDF berhasil di-generate di: dataset/results/reports/Laporan_Eksperimen_Hybrid_Clustering.pdf
+2026-06-17 23:00:35,197 - INFO - Pipeline HKI Selesai.
+2026-06-18 13:46:41,172 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-18 13:46:41,376 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-18 13:46:43,110 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-18 13:46:43,349 - INFO - Hopkins Tendency        : 0.7283
+2026-06-18 13:46:43,349 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-18 13:46:43,349 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-18 13:46:43,349 - INFO - INVENSI METRIK: WCVI     : 0.6842
+2026-06-18 13:46:46,003 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-18 13:46:46,003 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-18 13:46:46,003 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-18 13:46:46,048 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-18 13:46:49,240 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-18 13:46:49,240 - INFO - LANGKAH 6b: Uji Autokorelasi Spasial Global (Moran's I)
+2026-06-18 13:47:23,032 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-18 13:47:23,198 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-18 13:47:24,637 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-18 13:47:24,838 - INFO - Hopkins Tendency        : 0.7475
+2026-06-18 13:47:24,838 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-18 13:47:24,838 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-18 13:47:24,838 - INFO - INVENSI METRIK: WCVI     : 0.6900
+2026-06-18 13:47:26,921 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-18 13:47:26,921 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-18 13:47:26,927 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-18 13:47:26,942 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-18 13:47:28,648 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-18 13:47:28,648 - INFO - LANGKAH 6b: Uji Autokorelasi Spasial Global (Moran's I)
+2026-06-18 13:47:28,904 - INFO - Moran's I - TPT: I = 0.2646 | E[I] = -0.002053 | z = 14.6907 | p = 0.0010
+2026-06-18 13:47:28,932 - INFO - Moran's I - PDRB_Konstan: I = 0.3726 | E[I] = -0.002053 | z = 22.2997 | p = 0.0010
+2026-06-18 13:47:28,957 - INFO - Moran's I - Cluster: I = 0.1489 | E[I] = -0.002053 | z = 8.6276 | p = 0.0010
+2026-06-18 13:47:28,958 - INFO - Pipeline HKI Selesai.
+2026-06-18 14:15:21,412 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-18 14:15:21,628 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-18 14:15:23,185 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-18 14:15:23,440 - INFO - Hopkins Tendency        : 0.7229
+2026-06-18 14:15:23,440 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-18 14:15:23,440 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-18 14:15:23,440 - INFO - INVENSI METRIK: WCVI     : 0.6826
+2026-06-18 14:15:28,011 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-18 14:15:28,011 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-18 14:15:28,011 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-18 14:15:28,032 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-18 14:15:30,585 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-18 14:15:30,585 - INFO - LANGKAH 6b: Uji Autokorelasi Spasial Global (Moran's I)
+2026-06-18 14:15:31,145 - INFO - Moran's I - TPT: I = 0.2646 | E[I] = -0.002053 | z = 15.0237 | p = 0.0010
+2026-06-18 14:15:31,205 - INFO - Moran's I - PDRB_Konstan: I = 0.3726 | E[I] = -0.002053 | z = 23.4757 | p = 0.0010
+2026-06-18 14:15:31,250 - INFO - Moran's I - Cluster: I = 0.1489 | E[I] = -0.002053 | z = 8.7263 | p = 0.0010
+2026-06-18 14:15:31,251 - INFO - Pipeline HKI Selesai.
+2026-06-18 23:59:56,908 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-18 23:59:56,955 - WARNING - 7 baris tidak dapat koordinat (provinsi tanpa referensi). Akan dikecualikan dari Moran's I di langkah_6.
+2026-06-18 23:59:56,955 - INFO - Imputasi koordinat: 13 baris diisi mean-provinsi, 7 baris tetap NaN.
+2026-06-18 23:59:57,126 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-18 23:59:58,988 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-18 23:59:59,307 - INFO - Hopkins Tendency        : 0.7360
+2026-06-18 23:59:59,307 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-18 23:59:59,307 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-18 23:59:59,307 - INFO - INVENSI METRIK: WCVI     : 0.6865
+2026-06-19 00:00:02,560 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-19 00:00:02,560 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-19 00:00:02,560 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-19 00:00:02,582 - INFO - Kruskal-Wallis TPT: H = 187.0516 | p = 0.000000
+2026-06-19 00:00:02,591 - INFO - Dunn Post-Hoc (Bonferroni) — pasangan klaster:
+2026-06-19 00:00:02,591 - INFO -   Berkembang Industrial vs Berkembang Rentan: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:00:02,591 - INFO -   Berkembang Industrial vs Berkembang Seimbang: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:00:02,592 - INFO -   Berkembang Industrial vs Maju & Urbanized: p = 0.000001 [SIGNIFIKAN]
+2026-06-19 00:00:02,592 - INFO -   Berkembang Rentan vs Berkembang Seimbang: p = 0.370919 [tidak signifikan]
+2026-06-19 00:00:02,592 - INFO -   Berkembang Rentan vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:00:02,592 - INFO -   Berkembang Seimbang vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:00:02,610 - INFO - Chi-Square Jawa vs Luar Jawa: chi2 = 205.2667 | p = 0.000000
+2026-06-19 00:00:02,610 - INFO - Cramer's V (Effect Size) = 0.6486  [0.1=weak, 0.3=moderate, 0.5=strong]
+2026-06-19 00:00:02,610 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-19 00:00:07,004 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-19 00:00:07,004 - INFO - LANGKAH 6: Uji Autokorelasi Spasial Global (Moran's I) — KNN Geografis
+2026-06-19 00:00:07,014 - WARNING - 7 baris dieksklusikan dari Moran's I (koordinat NaN).
+2026-06-19 00:00:07,022 - INFO - KNN weights dibangun: k=5, n=481 (dari 481 observasi)
+2026-06-19 00:00:07,048 - INFO - Moran's I - TPT: I = 0.3630 | E[I] = -0.002083 | z = 13.6548 | p = 0.0010
+2026-06-19 00:00:07,096 - INFO - Moran's I - PDRB_Konstan: I = 0.4886 | E[I] = -0.002083 | z = 19.1008 | p = 0.0010
+2026-06-19 00:00:07,136 - INFO - Moran's I - Cluster: I = 0.1788 | E[I] = -0.002083 | z = 6.4879 | p = 0.0010
+2026-06-19 00:00:07,136 - INFO - LANGKAH 7: Ablation Study — Hybrid (HDBSCAN→KMeans) vs Baseline KMeans++
+2026-06-19 00:00:07,270 - INFO - Ablation Results:
+                  Model  Silhouette (↑ better)  Davies-Bouldin (↓ better)
+Hybrid (HDBSCAN→KMeans)               0.189149                   1.671545
+      Baseline KMeans++               0.190913                   1.656353
+2026-06-19 00:00:07,272 - INFO - Verdict — Hybrid unggul di Silhouette: False | Hybrid unggul di Davies-Bouldin: False
+2026-06-19 00:00:07,272 - INFO - Pipeline HKI Selesai.
+2026-06-19 00:01:15,785 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-19 00:01:15,811 - WARNING - 7 baris tidak dapat koordinat (provinsi tanpa referensi). Akan dikecualikan dari Moran's I di langkah_6.
+2026-06-19 00:01:15,811 - INFO - Imputasi koordinat: 13 baris diisi mean-provinsi, 7 baris tetap NaN.
+2026-06-19 00:01:16,006 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-19 00:01:17,468 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-19 00:01:17,805 - INFO - Hopkins Tendency        : 0.7227
+2026-06-19 00:01:17,805 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-19 00:01:17,805 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-19 00:01:17,805 - INFO - INVENSI METRIK: WCVI     : 0.6825
+2026-06-19 00:01:21,626 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-19 00:01:21,626 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-19 00:01:21,627 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-19 00:01:21,646 - INFO - Kruskal-Wallis TPT: H = 187.0516 | p = 0.000000
+2026-06-19 00:01:21,660 - INFO - Dunn Post-Hoc (Bonferroni) — pasangan klaster:
+2026-06-19 00:01:21,661 - INFO -   Berkembang Industrial vs Berkembang Rentan: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:01:21,661 - INFO -   Berkembang Industrial vs Berkembang Seimbang: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:01:21,661 - INFO -   Berkembang Industrial vs Maju & Urbanized: p = 0.000001 [SIGNIFIKAN]
+2026-06-19 00:01:21,662 - INFO -   Berkembang Rentan vs Berkembang Seimbang: p = 0.370919 [tidak signifikan]
+2026-06-19 00:01:21,662 - INFO -   Berkembang Rentan vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:01:21,662 - INFO -   Berkembang Seimbang vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-19 00:01:21,683 - INFO - Chi-Square Jawa vs Luar Jawa: chi2 = 205.2667 | p = 0.000000
+2026-06-19 00:01:21,683 - INFO - Cramer's V (Effect Size) = 0.6486  [0.1=weak, 0.3=moderate, 0.5=strong]
+2026-06-19 00:01:21,683 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-19 00:01:24,987 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-19 00:01:24,987 - INFO - LANGKAH 6: Uji Autokorelasi Spasial Global (Moran's I) — KNN Geografis
+2026-06-19 00:01:24,989 - WARNING - 7 baris dieksklusikan dari Moran's I (koordinat NaN).
+2026-06-19 00:01:25,000 - INFO - KNN weights dibangun: k=5, n=481 (dari 481 observasi)
+2026-06-19 00:01:25,050 - INFO - Moran's I - TPT: I = 0.3630 | E[I] = -0.002083 | z = 13.3295 | p = 0.0010
+2026-06-19 00:01:25,108 - INFO - Moran's I - PDRB_Konstan: I = 0.4886 | E[I] = -0.002083 | z = 19.4913 | p = 0.0010
+2026-06-19 00:01:25,157 - INFO - Moran's I - Cluster: I = 0.1788 | E[I] = -0.002083 | z = 6.5354 | p = 0.0010
+2026-06-19 00:01:25,158 - INFO - LANGKAH 7: Ablation Study — Hybrid (HDBSCAN→KMeans) vs Baseline KMeans++
+2026-06-19 00:01:25,273 - INFO - Ablation Results:
+                  Model  Silhouette (↑ better)  Davies-Bouldin (↓ better)
+Hybrid (HDBSCAN→KMeans)               0.189149                   1.671545
+      Baseline KMeans++               0.190913                   1.656353
+2026-06-19 00:01:25,273 - INFO - Verdict — Hybrid unggul di Silhouette: False | Hybrid unggul di Davies-Bouldin: False
+2026-06-19 00:01:25,281 - INFO - Pipeline HKI Selesai. Hasil data_normal.csv telah diekspor.
+2026-06-22 19:54:31,338 - INFO - LANGKAH 1: Preprocessing & Outlier Isolation
+2026-06-22 19:54:31,381 - WARNING - 7 baris tidak dapat koordinat (provinsi tanpa referensi). Akan dikecualikan dari Moran's I di langkah_6.
+2026-06-22 19:54:31,381 - INFO - Imputasi koordinat: 13 baris diisi mean-provinsi, 7 baris tetap NaN.
+2026-06-22 19:54:31,556 - INFO - LANGKAH 2: Hybrid HDBSCAN -> KMeans
+2026-06-22 19:54:33,500 - INFO - LANGKAH 3: Evaluasi Metrik & Stabilitas
+2026-06-22 19:54:33,719 - INFO - Hopkins Tendency        : 0.7279
+2026-06-22 19:54:33,720 - INFO - R-Squared (EESS%)        : 49.11%
+2026-06-22 19:54:33,720 - INFO - RF Surrogate Accuracy    : 89.75%
+2026-06-22 19:54:33,720 - INFO - INVENSI METRIK: WCVI     : 0.6841
+2026-06-22 19:54:35,860 - INFO - Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+2026-06-22 19:54:35,860 - INFO - Stabilitas R2 Rata-rata  : 49.15%
+2026-06-22 19:54:35,860 - INFO - LANGKAH 4: Profiling & Uji Hipotesis
+2026-06-22 19:54:35,881 - INFO - Kruskal-Wallis TPT: H = 187.0516 | p = 0.000000
+2026-06-22 19:54:35,894 - INFO - Dunn Post-Hoc (Bonferroni) — pasangan klaster:
+2026-06-22 19:54:35,894 - INFO -   Berkembang Industrial vs Berkembang Rentan: p = 0.000000 [SIGNIFIKAN]
+2026-06-22 19:54:35,894 - INFO -   Berkembang Industrial vs Berkembang Seimbang: p = 0.000000 [SIGNIFIKAN]
+2026-06-22 19:54:35,894 - INFO -   Berkembang Industrial vs Maju & Urbanized: p = 0.000001 [SIGNIFIKAN]
+2026-06-22 19:54:35,894 - INFO -   Berkembang Rentan vs Berkembang Seimbang: p = 0.370919 [tidak signifikan]
+2026-06-22 19:54:35,895 - INFO -   Berkembang Rentan vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-22 19:54:35,895 - INFO -   Berkembang Seimbang vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+2026-06-22 19:54:35,909 - INFO - Chi-Square Jawa vs Luar Jawa: chi2 = 205.2667 | p = 0.000000
+2026-06-22 19:54:35,909 - INFO - Cramer's V (Effect Size) = 0.6486  [0.1=weak, 0.3=moderate, 0.5=strong]
+2026-06-22 19:54:35,909 - INFO - LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+2026-06-22 19:54:38,403 - INFO - Visualisasi berhasil disimpan di dataset/results/figures/
+2026-06-22 19:54:38,405 - INFO - LANGKAH 6: Uji Autokorelasi Spasial Global (Moran's I) — KNN Geografis
+2026-06-22 19:54:38,411 - WARNING - 7 baris dieksklusikan dari Moran's I (koordinat NaN).
+2026-06-22 19:54:38,419 - INFO - KNN weights dibangun: k=5, n=481 (dari 481 observasi)
+2026-06-22 19:54:38,443 - INFO - Moran's I - TPT: I = 0.3630 | E[I] = -0.002083 | z = 13.5307 | p = 0.0010
+2026-06-22 19:54:38,462 - INFO - Moran's I - PDRB_Konstan: I = 0.4886 | E[I] = -0.002083 | z = 19.8052 | p = 0.0010
+2026-06-22 19:54:38,486 - INFO - Moran's I - Cluster: I = 0.1788 | E[I] = -0.002083 | z = 6.6435 | p = 0.0010
+2026-06-22 19:54:38,486 - INFO - LANGKAH 7: Ablation Study — Hybrid (HDBSCAN→KMeans) vs Baseline KMeans++
+2026-06-22 19:54:38,579 - INFO - Ablation Results:
+                  Model  Silhouette (↑ better)  Davies-Bouldin (↓ better)
+Hybrid (HDBSCAN→KMeans)               0.189149                   1.671545
+      Baseline KMeans++               0.190913                   1.656353
+2026-06-22 19:54:38,579 - INFO - Verdict — Hybrid unggul di Silhouette: False | Hybrid unggul di Davies-Bouldin: False
+2026-06-22 19:54:38,587 - INFO - Pipeline HKI Selesai. Hasil data_normal.csv telah diekspor.
+LANGKAH 1: Preprocessing & Outlier Isolation
+7 baris tidak dapat koordinat (provinsi tanpa referensi). Akan dikecualikan dari Moran's I di langkah_6.
+Imputasi koordinat: 13 baris diisi mean-provinsi, 7 baris tetap NaN.
+LANGKAH 2: Hybrid HDBSCAN -> KMeans
+CSV processed disimpan: ./dataset\processed\data_normal.csv (488 baris)
+LANGKAH 3: Evaluasi Metrik & Stabilitas
+Hopkins Tendency        : 0.7183
+R-Squared (EESS%)        : 49.11%
+RF Surrogate Accuracy    : 89.75%
+INVENSI METRIK: WCVI     : 0.6812
+Stabilitas ARI Rata-rata : 0.8966 (Std: 0.0405)
+Stabilitas R2 Rata-rata  : 49.15%
+LANGKAH 4: Profiling & Uji Hipotesis
+Kruskal-Wallis TPT: H = 187.0516 | p = 0.000000
+Dunn Post-Hoc (Bonferroni) — pasangan klaster:
+  Berkembang Industrial vs Berkembang Rentan: p = 0.000000 [SIGNIFIKAN]
+  Berkembang Industrial vs Berkembang Seimbang: p = 0.000000 [SIGNIFIKAN]
+  Berkembang Industrial vs Maju & Urbanized: p = 0.000001 [SIGNIFIKAN]
+  Berkembang Rentan vs Berkembang Seimbang: p = 0.370919 [tidak signifikan]
+  Berkembang Rentan vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+  Berkembang Seimbang vs Maju & Urbanized: p = 0.000000 [SIGNIFIKAN]
+Chi-Square Jawa vs Luar Jawa: chi2 = 205.2667 | p = 0.000000
+Cramer's V (Effect Size) = 0.6486  [0.1=weak, 0.3=moderate, 0.5=strong]
+LANGKAH 5: Generate Visualisasi Grafik (Heatmap, PCA, Boxplot, Scatter)
+Visualisasi berhasil disimpan di ./dataset\results\figures/
+LANGKAH 6: Uji Autokorelasi Spasial Global (Moran's I) — KNN Geografis
+7 baris dieksklusikan dari Moran's I (koordinat NaN).
+KNN weights dibangun: k=5, n=481 (dari 481 observasi)
+Moran's I - TPT: I = 0.3630 | E[I] = -0.002083 | z = 13.1738 | p = 0.0010
+Moran's I - PDRB_Konstan: I = 0.4886 | E[I] = -0.002083 | z = 19.5517 | p = 0.0010
+Moran's I - Cluster: I = 0.1788 | E[I] = -0.002083 | z = 6.8751 | p = 0.0010
+LANGKAH 7: Ablation Study [Dual-Category Composite Verdict]
+Ablation Results (Dual-Category):
+                  Model  Silhouette  Davies-Bouldin  Calinski-Harabasz  R-Squared (EESS%)  RF OOB Accuracy     WCVI  Cat-A Rank (↓ better)  Cat-A Wins (/6)  Native Noise Points (B1)  Auto k Selection (B2)  Reproducibility ARI (B3)  Wall Time ms (B4)  Cat-B Rank (↓ better)  Cat-B Wins (/4)  Composite Total Rank (↓ better)  Composite Wins (/10)
+Hybrid (HDBSCAN→KMeans)    0.189149        1.671545         155.681881           0.491086         0.897541 0.681194                     12                0                       149                      1                  1.000000              14.11                      5                3                               17                     3
+      Baseline KMeans++    0.190913        1.656353         155.941470           0.491503         0.934426 0.692426                      6                6                         0                      0                  0.763134               2.55                      7                1                               13                     7
+ARI (Hybrid vs KMeans++): 0.8884
+VERDICT: KMEANS++ UNGGUL SECARA UMUM (rank 13 vs 17; wins 7/10 vs 3/10). Cat-A Euclidean: KMeans++ menang 6/6; Cat-B Structural: Hybrid menang 3/4.
+Pipeline HKI Selesai.
+2026-06-22 22:09:35,326 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-22 22:09:35,347 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-22 22:09:35,529 - INFO - LANGKAH 4: Pencarian Model Optimal
+2026-06-22 22:09:38,625 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-22 22:09:39,676 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-22 22:09:41,880 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 01:32:14,660 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 01:32:14,692 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 01:32:14,883 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 01:32:15,038 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 01:32:15,053 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 01:32:17,697 - INFO - LANGKAH 5.5: Normalisasi Range + Composite Welfare Score
+2026-06-30 01:32:17,732 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-30 01:32:20,011 - INFO - LANGKAH 6.5: Peta Choropleth (Proyeksi Geospasial)
+2026-06-30 01:32:51,226 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 01:32:52,266 - INFO - LANGKAH 7.5: Narrative Data Export
+2026-06-30 01:32:52,405 - INFO - LANGKAH 8: Test Dataset Generator + Evaluasi Model
+2026-06-30 01:33:48,034 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 01:33:48,052 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 01:33:48,213 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 01:33:48,357 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 01:33:48,368 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 01:33:50,717 - INFO - LANGKAH 5.5: Normalisasi Range + Composite Welfare Score
+2026-06-30 01:33:50,751 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-30 01:33:53,062 - INFO - LANGKAH 6.5: Peta Choropleth (Proyeksi Geospasial)
+2026-06-30 01:34:24,636 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 01:34:25,823 - INFO - LANGKAH 7.5: Narrative Data Export
+2026-06-30 01:34:25,980 - INFO - LANGKAH 8: Test Dataset Generator + Evaluasi Model
+2026-06-30 04:06:17,833 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 04:06:17,881 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 04:06:18,191 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 04:06:18,420 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 04:06:18,438 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 04:06:44,343 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 04:06:44,362 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 04:06:44,523 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 04:06:44,661 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 04:06:44,682 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 04:07:21,225 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 04:07:21,250 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 04:07:21,413 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 04:07:21,563 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 04:07:21,573 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 04:07:23,804 - INFO - LANGKAH 5.5: Normalisasi Range + Composite Welfare Score
+2026-06-30 04:07:23,836 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-30 04:07:25,440 - INFO - LANGKAH 6.5: Peta Choropleth (Proyeksi Geospasial)
+2026-06-30 04:07:48,298 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 04:07:48,382 - INFO - LANGKAH 7.5: Narrative Data Export
+2026-06-30 04:07:48,461 - INFO - LANGKAH 8: Test Dataset Generator + Evaluasi Model
+2026-06-30 04:08:21,912 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 04:08:21,931 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 04:08:22,094 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 04:08:22,250 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 04:08:22,261 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 04:08:24,330 - INFO - LANGKAH 5.5: Normalisasi Range + Composite Welfare Score
+2026-06-30 04:08:24,387 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-30 04:08:26,344 - INFO - LANGKAH 6.5: Peta Choropleth (Proyeksi Geospasial)
+2026-06-30 04:08:49,039 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 04:08:49,121 - INFO - LANGKAH 7.5: Narrative Data Export
+2026-06-30 04:08:49,186 - INFO - LANGKAH 8: Test Dataset Generator + Evaluasi Model
+2026-06-30 04:20:17,658 - INFO - LANGKAH 2: Memuat Dataset
+2026-06-30 04:20:17,678 - INFO - LANGKAH 3: Pra-pemrosesan Data
+2026-06-30 04:20:17,840 - INFO - LANGKAH 3.5: Moran's I Pre-Clustering (Spatial Clusterability Check)
+2026-06-30 04:20:17,988 - INFO - LANGKAH 4: Pencarian Model Optimal (HDBSCAN Auto-Selection)
+2026-06-30 04:20:17,999 - INFO - LANGKAH 5: Hybrid HDBSCAN-KMeans + WCVI
+2026-06-30 04:20:20,105 - INFO - LANGKAH 5.5: Normalisasi Range + Composite Welfare Score
+2026-06-30 04:20:20,136 - INFO - LANGKAH 6: Profiling & Visualisasi
+2026-06-30 04:20:21,735 - INFO - LANGKAH 6.5: Peta Choropleth (Proyeksi Geospasial)
+2026-06-30 04:20:44,292 - INFO - LANGKAH 7: Analisis Lanjutan
+2026-06-30 04:20:44,371 - INFO - LANGKAH 7.5: Narrative Data Export

@@ -1,0 +1,8 @@
+Feature,Domain_Max,Weight,Type,RF_Importance
+Persentase_Penduduk_Miskin,50,0.1,Negative,0.15334007462945592
+Rata_rata_Lama_Sekolah,15,0.15,Positive,0.15057934941801512
+Pengeluaran_per_Kapita,25000,0.1,Positive,0.1360985161714308
+UHH,80,0.25,Positive,0.189962104240753
+Sanitasi_Layak,100,0.05,Positive,0.09999116585971873
+TPT,15,0.15,Negative,0.08096210354379527
+PDRB_Konstan,1000000000000,0.2,Positive,0.18906668613683128

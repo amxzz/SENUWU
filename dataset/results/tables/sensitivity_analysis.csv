@@ -1,0 +1,10 @@
+Scaler,Contamination,Silhouette,DBI,Daerah_Normal
+StandardScaler,0.03,0.2053,1.4526,498
+StandardScaler,0.05,0.2244,1.5183,488
+StandardScaler,0.1,0.2176,1.5219,462
+RobustScaler,0.03,0.2448,1.2608,498
+RobustScaler,0.05,0.2138,1.3466,488
+RobustScaler,0.1,0.2116,1.3744,462
+PowerTransformer,0.03,0.1866,1.6861,498
+PowerTransformer,0.05,0.1909,1.6564,488
+PowerTransformer,0.1,0.1831,1.6789,462

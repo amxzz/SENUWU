@@ -1,0 +1,67 @@
+[
+    {
+        "id": "ref_1",
+        "title": "Pengelompokan Kemiskinan Di Provinsi Jawa Timur Tahun 2024 Dengan Pendekatan Algoritma K-Means Dan K-Means++",
+        "authors": [
+            "Suci Amalia",
+            "Annisatul Nikmah",
+            "Lutfiah Maharani Siniwi"
+        ],
+        "year": "2025",
+        "journal": "Jurnal Ilmiah (Crossref Indexed)",
+        "url": "https://doi.org/10.57185/mutiara.v3i8.407",
+        "filename": "ref_1_2025.pdf"
+    },
+    {
+        "id": "ref_2",
+        "title": "Implementasi Algoritma K-Means dan C-Means untuk Clustering Angka Kemiskinan",
+        "authors": [
+            "Chairul Habibi",
+            "Reni Nursyanti"
+        ],
+        "year": "2023",
+        "journal": "Jurnal Ilmiah (Crossref Indexed)",
+        "url": "https://doi.org/10.36448/expert.v13i1.3107",
+        "filename": "ref_2_2023.pdf"
+    },
+    {
+        "id": "ref_3",
+        "title": "Pengklasifikasian 10 Kabupaten/Kota di Provinsi Nusa Tenggara Barat untuk Kasus Kemiskinan Tahun 2022 Menggunakan Analisis Cluster Metode K-Means",
+        "authors": [
+            "Sabna Zulfaa Sabina",
+            "Dzaki Ade Alfarez",
+            "Syifa Salsabila Satya Graha",
+            "Muhammad Yuzaul Auladi",
+            "Harsyiah Lisa"
+        ],
+        "year": "2024",
+        "journal": "Jurnal Ilmiah (Crossref Indexed)",
+        "url": "https://doi.org/10.29303/ijasds.v1i1.5415",
+        "filename": "ref_3_2024.pdf"
+    },
+    {
+        "id": "ref_4",
+        "title": "PENERAPAN CENTER CISPLACEMENT FUZZY K-MEANS UNTUK PEMETAAN KEMISKINAN DI PULAU JAWA",
+        "authors": [
+            "Fitri Hidayah Sundawati"
+        ],
+        "year": "2025",
+        "journal": "Jurnal Ilmiah (Crossref Indexed)",
+        "url": "https://doi.org/10.51878/knowledge.v5i3.6857",
+        "filename": "ref_4_2025.pdf"
+    },
+    {
+        "id": "ref_5",
+        "title": "Poverty Level Grouping in West Java Province with the K-Means Clustering Method",
+        "authors": [
+            "Amelia",
+            "Indah Manfaati Nur",
+            "Muhammad Rizky",
+            "Septiana Putri Milasari"
+        ],
+        "year": "2023",
+        "journal": "Jurnal Ilmiah (Crossref Indexed)",
+        "url": "https://doi.org/10.26714/jodi.v1i2.152",
+        "filename": "ref_5_2023.pdf"
+    }
+]

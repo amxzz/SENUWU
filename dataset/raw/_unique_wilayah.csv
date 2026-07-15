@@ -1,0 +1,515 @@
+Provinsi,Kab/Kota
+ACEH,Simeulue
+ACEH,Aceh Singkil
+ACEH,Aceh Selatan
+ACEH,Aceh Tenggara
+ACEH,Aceh Timur
+ACEH,Aceh Tengah
+ACEH,Aceh Barat
+ACEH,Aceh Besar
+ACEH,Pidie
+ACEH,Bireuen
+ACEH,Aceh Utara
+ACEH,Aceh Barat Daya
+ACEH,Gayo Lues
+ACEH,Aceh Tamiang
+ACEH,Nagan Raya
+ACEH,Aceh Jaya
+ACEH,Bener Meriah
+ACEH,Pidie Jaya
+ACEH,Kota Banda Aceh
+ACEH,Kota Sabang
+ACEH,Kota Langsa
+ACEH,Kota Lhokseumawe
+ACEH,Kota Subulussalam
+SUMATERA UTARA,Nias
+SUMATERA UTARA,Mandailing Natal
+SUMATERA UTARA,Tapanuli Selatan
+SUMATERA UTARA,Tapanuli Tengah
+SUMATERA UTARA,Tapanuli Utara
+SUMATERA UTARA,Toba Samosir
+SUMATERA UTARA,Labuhan Batu
+SUMATERA UTARA,Asahan
+SUMATERA UTARA,Simalungun
+SUMATERA UTARA,Dairi
+SUMATERA UTARA,Karo
+SUMATERA UTARA,Deli Serdang
+SUMATERA UTARA,Langkat
+SUMATERA UTARA,Nias Selatan
+SUMATERA UTARA,Humbang Hasundutan
+SUMATERA UTARA,Pakpak Bharat
+SUMATERA UTARA,Samosir
+SUMATERA UTARA,Serdang Bedagai
+SUMATERA UTARA,Batu Bara
+SUMATERA UTARA,Padang Lawas Utara
+SUMATERA UTARA,Padang Lawas
+SUMATERA UTARA,Labuhan Batu Selatan
+SUMATERA UTARA,Labuhan Batu Utara
+SUMATERA UTARA,Nias Utara
+SUMATERA UTARA,Nias Barat
+SUMATERA UTARA,Kota Sibolga
+SUMATERA UTARA,Kota Tanjung Balai
+SUMATERA UTARA,Kota Pematang Siantar
+SUMATERA UTARA,Kota Tebing Tinggi
+SUMATERA UTARA,Kota Medan
+SUMATERA UTARA,Kota Binjai
+SUMATERA UTARA,Kota Padangsidimpuan
+SUMATERA UTARA,Kota Gunungsitoli
+SUMATERA BARAT,Kepulauan Mentawai
+SUMATERA BARAT,Pesisir Selatan
+SUMATERA BARAT,Solok
+SUMATERA BARAT,Sijunjung
+SUMATERA BARAT,Tanah Datar
+SUMATERA BARAT,Padang Pariaman
+SUMATERA BARAT,Agam
+SUMATERA BARAT,Lima Puluh Kota
+SUMATERA BARAT,Pasaman
+SUMATERA BARAT,Solok Selatan
+SUMATERA BARAT,Dharmasraya
+SUMATERA BARAT,Pasaman Barat
+SUMATERA BARAT,Kota Padang
+SUMATERA BARAT,Kota Solok
+SUMATERA BARAT,Kota Sawah Lunto
+SUMATERA BARAT,Kota Padang Panjang
+SUMATERA BARAT,Kota Bukittinggi
+SUMATERA BARAT,Kota Payakumbuh
+SUMATERA BARAT,Kota Pariaman
+RIAU,Kuantan Singingi
+RIAU,Indragiri Hulu
+RIAU,Indragiri Hilir
+RIAU,Pelalawan
+RIAU,Siak
+RIAU,Kampar
+RIAU,Rokan Hulu
+RIAU,Bengkalis
+RIAU,Rokan Hilir
+RIAU,Kepulauan Meranti
+RIAU,Kota Pekanbaru
+RIAU,Kota Dumai
+JAMBI,Kerinci
+JAMBI,Merangin
+JAMBI,Sarolangun
+JAMBI,Batang Hari
+JAMBI,Muaro Jambi
+JAMBI,Tanjung Jabung Timur
+JAMBI,Tanjung Jabung Barat
+JAMBI,Tebo
+JAMBI,Bungo
+JAMBI,Kota Jambi
+JAMBI,Kota Sungai Penuh
+SUMATERA SELATAN,Ogan Komering Ulu
+SUMATERA SELATAN,Ogan Komering Ilir
+SUMATERA SELATAN,Muara Enim
+SUMATERA SELATAN,Lahat
+SUMATERA SELATAN,Musi Rawas
+SUMATERA SELATAN,Musi Banyuasin
+SUMATERA SELATAN,Banyu Asin
+SUMATERA SELATAN,Ogan Komering Ulu Selatan
+SUMATERA SELATAN,Ogan Komering Ulu Timur
+SUMATERA SELATAN,Ogan Ilir
+SUMATERA SELATAN,Empat Lawang
+SUMATERA SELATAN,Penukal Abab Lematang Ilir
+SUMATERA SELATAN,Musi Rawas Utara
+SUMATERA SELATAN,Kota Palembang
+SUMATERA SELATAN,Kota Prabumulih
+SUMATERA SELATAN,Kota Pagar Alam
+SUMATERA SELATAN,Kota Lubuklinggau
+BENGKULU,Bengkulu Selatan
+BENGKULU,Rejang Lebong
+BENGKULU,Bengkulu Utara
+BENGKULU,Kaur
+BENGKULU,Seluma
+BENGKULU,Mukomuko
+BENGKULU,Lebong
+BENGKULU,Kepahiang
+BENGKULU,Bengkulu Tengah
+BENGKULU,Kota Bengkulu
+LAMPUNG,Lampung Barat
+LAMPUNG,Tanggamus
+LAMPUNG,Lampung Selatan
+LAMPUNG,Lampung Timur
+LAMPUNG,Lampung Tengah
+LAMPUNG,Lampung Utara
+LAMPUNG,Way Kanan
+LAMPUNG,Tulangbawang
+LAMPUNG,Pesawaran
+LAMPUNG,Pringsewu
+LAMPUNG,Mesuji
+LAMPUNG,Tulang Bawang Barat
+LAMPUNG,Pesisir Barat
+LAMPUNG,Kota Bandar Lampung
+LAMPUNG,Kota Metro
+KEP. BANGKA BELITUNG,Bangka
+KEP. BANGKA BELITUNG,Belitung
+KEP. BANGKA BELITUNG,Bangka Barat
+KEP. BANGKA BELITUNG,Bangka Tengah
+KEP. BANGKA BELITUNG,Bangka Selatan
+KEP. BANGKA BELITUNG,Belitung Timur
+KEP. BANGKA BELITUNG,Kota Pangkal Pinang
+KEPULAUAN RIAU,Karimun
+KEPULAUAN RIAU,Bintan
+KEPULAUAN RIAU,Natuna
+KEPULAUAN RIAU,Lingga
+KEPULAUAN RIAU,Kepulauan Anambas
+KEPULAUAN RIAU,Kota Batam
+KEPULAUAN RIAU,Kota Tanjung Pinang
+DKI JAKARTA,Kepulauan Seribu
+DKI JAKARTA,Kota Jakarta Selatan
+DKI JAKARTA,Kota Jakarta Timur
+DKI JAKARTA,Kota Jakarta Pusat
+DKI JAKARTA,Kota Jakarta Barat
+DKI JAKARTA,Kota Jakarta Utara
+JAWA BARAT,Bogor
+JAWA BARAT,Sukabumi
+JAWA BARAT,Cianjur
+JAWA BARAT,Bandung
+JAWA BARAT,Garut
+JAWA BARAT,Tasikmalaya
+JAWA BARAT,Ciamis
+JAWA BARAT,Kuningan
+JAWA BARAT,Cirebon
+JAWA BARAT,Majalengka
+JAWA BARAT,Sumedang
+JAWA BARAT,Indramayu
+JAWA BARAT,Subang
+JAWA BARAT,Purwakarta
+JAWA BARAT,Karawang
+JAWA BARAT,Bekasi
+JAWA BARAT,Bandung Barat
+JAWA BARAT,Pangandaran
+JAWA BARAT,Kota Bogor
+JAWA BARAT,Kota Sukabumi
+JAWA BARAT,Kota Bandung
+JAWA BARAT,Kota Cirebon
+JAWA BARAT,Kota Bekasi
+JAWA BARAT,Kota Depok
+JAWA BARAT,Kota Cimahi
+JAWA BARAT,Kota Tasikmalaya
+JAWA BARAT,Kota Banjar
+JAWA TENGAH,Cilacap
+JAWA TENGAH,Banyumas
+JAWA TENGAH,Purbalingga
+JAWA TENGAH,Banjarnegara
+JAWA TENGAH,Kebumen
+JAWA TENGAH,Purworejo
+JAWA TENGAH,Wonosobo
+JAWA TENGAH,Magelang
+JAWA TENGAH,Boyolali
+JAWA TENGAH,Klaten
+JAWA TENGAH,Sukoharjo
+JAWA TENGAH,Wonogiri
+JAWA TENGAH,Karanganyar
+JAWA TENGAH,Sragen
+JAWA TENGAH,Grobogan
+JAWA TENGAH,Blora
+JAWA TENGAH,Rembang
+JAWA TENGAH,Pati
+JAWA TENGAH,Kudus
+JAWA TENGAH,Jepara
+JAWA TENGAH,Demak
+JAWA TENGAH,Semarang
+JAWA TENGAH,Temanggung
+JAWA TENGAH,Kendal
+JAWA TENGAH,Batang
+JAWA TENGAH,Pekalongan
+JAWA TENGAH,Pemalang
+JAWA TENGAH,Tegal
+JAWA TENGAH,Brebes
+JAWA TENGAH,Kota Magelang
+JAWA TENGAH,Kota Surakarta
+JAWA TENGAH,Kota Salatiga
+JAWA TENGAH,Kota Semarang
+JAWA TENGAH,Kota Pekalongan
+JAWA TENGAH,Kota Tegal
+D I YOGYAKARTA,Kulon Progo
+D I YOGYAKARTA,Bantul
+D I YOGYAKARTA,Gunung Kidul
+D I YOGYAKARTA,Sleman
+D I YOGYAKARTA,Kota Yogyakarta
+JAWA TIMUR,Pacitan
+JAWA TIMUR,Ponorogo
+JAWA TIMUR,Trenggalek
+JAWA TIMUR,Tulungagung
+JAWA TIMUR,Blitar
+JAWA TIMUR,Kediri
+JAWA TIMUR,Malang
+JAWA TIMUR,Lumajang
+JAWA TIMUR,Jember
+JAWA TIMUR,Banyuwangi
+JAWA TIMUR,Bondowoso
+JAWA TIMUR,Situbondo
+JAWA TIMUR,Probolinggo
+JAWA TIMUR,Pasuruan
+JAWA TIMUR,Sidoarjo
+JAWA TIMUR,Mojokerto
+JAWA TIMUR,Jombang
+JAWA TIMUR,Nganjuk
+JAWA TIMUR,Madiun
+JAWA TIMUR,Magetan
+JAWA TIMUR,Ngawi
+JAWA TIMUR,Bojonegoro
+JAWA TIMUR,Tuban
+JAWA TIMUR,Lamongan
+JAWA TIMUR,Gresik
+JAWA TIMUR,Bangkalan
+JAWA TIMUR,Sampang
+JAWA TIMUR,Pamekasan
+JAWA TIMUR,Sumenep
+JAWA TIMUR,Kota Kediri
+JAWA TIMUR,Kota Blitar
+JAWA TIMUR,Kota Malang
+JAWA TIMUR,Kota Probolinggo
+JAWA TIMUR,Kota Pasuruan
+JAWA TIMUR,Kota Mojokerto
+JAWA TIMUR,Kota Madiun
+JAWA TIMUR,Kota Surabaya
+JAWA TIMUR,Kota Batu
+BANTEN,Pandeglang
+BANTEN,Lebak
+BANTEN,Tangerang
+BANTEN,Serang
+BANTEN,Kota Tangerang
+BANTEN,Kota Cilegon
+BANTEN,Kota Serang
+BANTEN,Kota Tangerang Selatan
+BALI,Jembrana
+BALI,Tabanan
+BALI,Badung
+BALI,Gianyar
+BALI,Klungkung
+BALI,Bangli
+BALI,Karang Asem
+BALI,Buleleng
+BALI,Kota Denpasar
+NUSA TENGGARA BARAT,Lombok Barat
+NUSA TENGGARA BARAT,Lombok Tengah
+NUSA TENGGARA BARAT,Lombok Timur
+NUSA TENGGARA BARAT,Sumbawa
+NUSA TENGGARA BARAT,Dompu
+NUSA TENGGARA BARAT,Bima
+NUSA TENGGARA BARAT,Sumbawa Barat
+NUSA TENGGARA BARAT,Lombok Utara
+NUSA TENGGARA BARAT,Kota Mataram
+NUSA TENGGARA BARAT,Kota Bima
+NUSA TENGGARA TIMUR,Sumba Barat
+NUSA TENGGARA TIMUR,Sumba Timur
+NUSA TENGGARA TIMUR,Kupang
+NUSA TENGGARA TIMUR,Timor Tengah Selatan
+NUSA TENGGARA TIMUR,Timor Tengah Utara
+NUSA TENGGARA TIMUR,Belu
+NUSA TENGGARA TIMUR,Alor
+NUSA TENGGARA TIMUR,Lembata
+NUSA TENGGARA TIMUR,Flores Timur
+NUSA TENGGARA TIMUR,Sikka
+NUSA TENGGARA TIMUR,Ende
+NUSA TENGGARA TIMUR,Ngada
+NUSA TENGGARA TIMUR,Manggarai
+NUSA TENGGARA TIMUR,Rote Ndao
+NUSA TENGGARA TIMUR,Manggarai Barat
+NUSA TENGGARA TIMUR,Sumba Tengah
+NUSA TENGGARA TIMUR,Sumba Barat Daya
+NUSA TENGGARA TIMUR,Nagekeo
+NUSA TENGGARA TIMUR,Manggarai Timur
+NUSA TENGGARA TIMUR,Sabu Raijua
+NUSA TENGGARA TIMUR,Malaka
+NUSA TENGGARA TIMUR,Kota Kupang
+KALIMANTAN BARAT,Sambas
+KALIMANTAN BARAT,Bengkayang
+KALIMANTAN BARAT,Landak
+KALIMANTAN BARAT,Pontianak
+KALIMANTAN BARAT,Sanggau
+KALIMANTAN BARAT,Ketapang
+KALIMANTAN BARAT,Sintang
+KALIMANTAN BARAT,Kapuas Hulu
+KALIMANTAN BARAT,Sekadau
+KALIMANTAN BARAT,Melawi
+KALIMANTAN BARAT,Kayong Utara
+KALIMANTAN BARAT,Kubu Raya
+KALIMANTAN BARAT,Kota Pontianak
+KALIMANTAN BARAT,Kota Singkawang
+KALIMANTAN TENGAH,Kotawaringin Barat
+KALIMANTAN TENGAH,Kotawaringin Timur
+KALIMANTAN TENGAH,Kapuas
+KALIMANTAN TENGAH,Barito Selatan
+KALIMANTAN TENGAH,Barito Utara
+KALIMANTAN TENGAH,Sukamara
+KALIMANTAN TENGAH,Lamandau
+KALIMANTAN TENGAH,Seruyan
+KALIMANTAN TENGAH,Katingan
+KALIMANTAN TENGAH,Pulang Pisau
+KALIMANTAN TENGAH,Gunung Mas
+KALIMANTAN TENGAH,Barito Timur
+KALIMANTAN TENGAH,Murung Raya
+KALIMANTAN TENGAH,Kota Palangka Raya
+KALIMANTAN SELATAN,Tanah Laut
+KALIMANTAN SELATAN,Kota Baru
+KALIMANTAN SELATAN,Banjar
+KALIMANTAN SELATAN,Barito Kuala
+KALIMANTAN SELATAN,Tapin
+KALIMANTAN SELATAN,Hulu Sungai Selatan
+KALIMANTAN SELATAN,Hulu Sungai Tengah
+KALIMANTAN SELATAN,Hulu Sungai Utara
+KALIMANTAN SELATAN,Tabalong
+KALIMANTAN SELATAN,Tanah Bumbu
+KALIMANTAN SELATAN,Balangan
+KALIMANTAN SELATAN,Kota Banjarmasin
+KALIMANTAN SELATAN,Kota Banjar Baru
+KALIMANTAN TIMUR,Paser
+KALIMANTAN TIMUR,Kutai Barat
+KALIMANTAN TIMUR,Kutai Kartanegara
+KALIMANTAN TIMUR,Kutai Timur
+KALIMANTAN TIMUR,Berau
+KALIMANTAN TIMUR,Penajam Paser Utara
+KALIMANTAN TIMUR,Mahakam Hulu
+KALIMANTAN TIMUR,Kota Balikpapan
+KALIMANTAN TIMUR,Kota Samarinda
+KALIMANTAN TIMUR,Kota Bontang
+KALIMANTAN UTARA,Malinau
+KALIMANTAN UTARA,Bulungan
+KALIMANTAN UTARA,Tana Tidung
+KALIMANTAN UTARA,Nunukan
+KALIMANTAN UTARA,Kota Tarakan
+SULAWESI UTARA,Bolaang Mongondow
+SULAWESI UTARA,Minahasa
+SULAWESI UTARA,Kepulauan Sangihe
+SULAWESI UTARA,Kepulauan Talaud
+SULAWESI UTARA,Minahasa Selatan
+SULAWESI UTARA,Minahasa Utara
+SULAWESI UTARA,Bolaang Mongondow Utara
+SULAWESI UTARA,Siau Tagulandang Biaro
+SULAWESI UTARA,Minahasa Tenggara
+SULAWESI UTARA,Bolaang Mongondow Selatan
+SULAWESI UTARA,Bolaang Mongondow Timur
+SULAWESI UTARA,Kota Manado
+SULAWESI UTARA,Kota Bitung
+SULAWESI UTARA,Kota Tomohon
+SULAWESI UTARA,Kota Kotamobagu
+SULAWESI TENGAH,Banggai Kepulauan
+SULAWESI TENGAH,Banggai
+SULAWESI TENGAH,Morowali
+SULAWESI TENGAH,Poso
+SULAWESI TENGAH,Donggala
+SULAWESI TENGAH,Toli-Toli
+SULAWESI TENGAH,Buol
+SULAWESI TENGAH,Parigi Moutong
+SULAWESI TENGAH,Tojo Una-Una
+SULAWESI TENGAH,Sigi
+SULAWESI TENGAH,Banggai Laut
+SULAWESI TENGAH,Morowali Utara
+SULAWESI TENGAH,Kota Palu
+SULAWESI SELATAN,Kepulauan Selayar
+SULAWESI SELATAN,Bulukumba
+SULAWESI SELATAN,Bantaeng
+SULAWESI SELATAN,Jeneponto
+SULAWESI SELATAN,Takalar
+SULAWESI SELATAN,Gowa
+SULAWESI SELATAN,Sinjai
+SULAWESI SELATAN,Maros
+SULAWESI SELATAN,Pangkajene Dan Kepulauan
+SULAWESI SELATAN,Barru
+SULAWESI SELATAN,Bone
+SULAWESI SELATAN,Soppeng
+SULAWESI SELATAN,Wajo
+SULAWESI SELATAN,Sidenreng Rappang
+SULAWESI SELATAN,Pinrang
+SULAWESI SELATAN,Enrekang
+SULAWESI SELATAN,Luwu
+SULAWESI SELATAN,Tana Toraja
+SULAWESI SELATAN,Luwu Utara
+SULAWESI SELATAN,Luwu Timur
+SULAWESI SELATAN,Toraja Utara
+SULAWESI SELATAN,Kota Makassar
+SULAWESI SELATAN,Kota Parepare
+SULAWESI SELATAN,Kota Palopo
+SULAWESI TENGGARA,Buton
+SULAWESI TENGGARA,Muna
+SULAWESI TENGGARA,Konawe
+SULAWESI TENGGARA,Kolaka
+SULAWESI TENGGARA,Konawe Selatan
+SULAWESI TENGGARA,Bombana
+SULAWESI TENGGARA,Wakatobi
+SULAWESI TENGGARA,Kolaka Utara
+SULAWESI TENGGARA,Buton Utara
+SULAWESI TENGGARA,Konawe Utara
+SULAWESI TENGGARA,Kolaka Timur
+SULAWESI TENGGARA,Konawe Kepulauan
+SULAWESI TENGGARA,Muna Barat
+SULAWESI TENGGARA,Buton Tengah
+SULAWESI TENGGARA,Buton Selatan
+SULAWESI TENGGARA,Kota Kendari
+SULAWESI TENGGARA,Kota Baubau
+GORONTALO,Boalemo
+GORONTALO,Gorontalo
+GORONTALO,Pohuwato
+GORONTALO,Bone Bolango
+GORONTALO,Gorontalo Utara
+GORONTALO,Kota Gorontalo
+SULAWESI BARAT,Majene
+SULAWESI BARAT,Polewali Mandar
+SULAWESI BARAT,Mamasa
+SULAWESI BARAT,Mamuju
+SULAWESI BARAT,Mamuju Utara
+SULAWESI BARAT,Mamuju Tengah
+MALUKU,Maluku Tenggara Barat
+MALUKU,Maluku Tenggara
+MALUKU,Maluku Tengah
+MALUKU,Buru
+MALUKU,Kepulauan Aru
+MALUKU,Seram Bagian Barat
+MALUKU,Seram Bagian Timur
+MALUKU,Maluku Barat Daya
+MALUKU,Buru Selatan
+MALUKU,Kota Ambon
+MALUKU,Kota Tual
+MALUKU UTARA,Halmahera Barat
+MALUKU UTARA,Halmahera Tengah
+MALUKU UTARA,Kepulauan Sula
+MALUKU UTARA,Halmahera Selatan
+MALUKU UTARA,Halmahera Utara
+MALUKU UTARA,Halmahera Timur
+MALUKU UTARA,Pulau Morotai
+MALUKU UTARA,Pulau Taliabu
+MALUKU UTARA,Kota Ternate
+MALUKU UTARA,Kota Tidore Kepulauan
+PAPUA BARAT,Fakfak
+PAPUA BARAT,Kaimana
+PAPUA BARAT,Teluk Wondama
+PAPUA BARAT,Teluk Bintuni
+PAPUA BARAT,Manokwari
+PAPUA BARAT,Sorong Selatan
+PAPUA BARAT,Sorong
+PAPUA BARAT,Raja Ampat
+PAPUA BARAT,Tambrauw
+PAPUA BARAT,Maybrat
+PAPUA BARAT,Manokwari Selatan
+PAPUA BARAT,Pegunungan Arfak
+PAPUA BARAT,Kota Sorong
+PAPUA,Merauke
+PAPUA,Jayawijaya
+PAPUA,Jayapura
+PAPUA,Nabire
+PAPUA,Kepulauan Yapen
+PAPUA,Biak Numfor
+PAPUA,Paniai
+PAPUA,Puncak Jaya
+PAPUA,Mimika
+PAPUA,Boven Digoel
+PAPUA,Mappi
+PAPUA,Asmat
+PAPUA,Yahukimo
+PAPUA,Pegunungan Bintang
+PAPUA,Tolikara
+PAPUA,Sarmi
+PAPUA,Keerom
+PAPUA,Waropen
+PAPUA,Supiori
+PAPUA,Mamberamo Raya
+PAPUA,Nduga *
+PAPUA,Lanny Jaya
+PAPUA,Mamberamo Tengah
+PAPUA,Yalimo
+PAPUA,Puncak
+PAPUA,Dogiyai
+PAPUA,Intan Jaya
+PAPUA,Deiyai
+PAPUA,Kota Jayapura

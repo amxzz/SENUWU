@@ -1,0 +1,31 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python compiled files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Large datasets and unused raw files
+dataset/kota-kabupaten.json
+
+# Local agent session files
+.superpowers/
+
+# User-specific settings or IDE configs
+.vscode/
+.idea/
+.streamlit/secrets.toml
+
+# Documents and PDFs (User Request)
+*.docx
+*.pdf
+~$*.docx
